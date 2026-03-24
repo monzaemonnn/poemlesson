@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Rhythm & Flow — Pronunciation Lessons</title>
+  <meta name="description" content="Interactive ESL pronunciation lessons using classic poetry. Practice thought groups, linking sounds, and natural English rhythm.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ivory: #FAFAF5;
+      --warm-white: #F5F3ED;
+      --cream: #EDE9DD;
+      --sand: #D6D0C4;
+      --charcoal: #2C2C2C;
+      --dark: #1A1A1A;
+      --muted: #6B6560;
+      --terracotta: #C4644A;
+      --terracotta-light: rgba(196, 100, 74, 0.12);
+      --teal: #2A8A7A;
+      --teal-light: rgba(42, 138, 122, 0.10);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-poem: 'Source Serif 4', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--ivory);
+      color: var(--charcoal);
+      line-height: 1.7;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────── */
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ─────────────────────────────────── */
+    header { padding: 56px 0 40px; text-align: center; border-bottom: 1px solid var(--sand); }
+    header .overline {
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 14px;
+    }
+    header h1 {
+      font-family: var(--font-display); font-size: clamp(26px, 5vw, 40px);
+      font-weight: 700; line-height: 1.2; color: var(--dark); margin-bottom: 6px;
+    }
+    header .subtitle {
+      font-family: var(--font-display); font-size: 15px;
+      font-style: italic; color: var(--muted);
+    }
+
+    /* ── SECTIONS ───────────────────────────────── */
+    section { padding: 48px 0; }
+    section + section { border-top: 1px solid var(--cream); }
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 18px;
+    }
+    h2 {
+      font-family: var(--font-display); font-size: clamp(21px, 3.5vw, 27px);
+      font-weight: 600; color: var(--dark); margin-bottom: 14px; line-height: 1.3;
+    }
+    p { font-size: 15px; color: var(--charcoal); margin-bottom: 14px; line-height: 1.8; font-weight: 300; }
+    p strong { font-weight: 600; }
+
+    /* ── CONCEPT CARDS ──────────────────────────── */
+    .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    @media (max-width: 540px) { .concept-grid { grid-template-columns: 1fr; } }
+    .concept-card {
+      background: var(--warm-white); border: 1px solid var(--cream);
+      border-radius: 8px; padding: 22px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .concept-card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .concept-card .icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .concept-card h3 { font-family: var(--font-display); font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
+    .concept-card p { font-size: 13px; margin-bottom: 0; color: var(--muted); line-height: 1.7; }
+
+    /* ── POEM SELECTOR ─────────────────────────── */
+    .poem-nav {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
+      padding-bottom: 20px; border-bottom: 1px solid var(--cream);
+    }
+    .poem-nav-btn {
+      font-family: var(--font-body); font-size: 12px; font-weight: 400;
+      padding: 7px 14px; border-radius: 100px;
+      border: 1px solid var(--sand); background: transparent;
+      color: var(--muted); cursor: pointer;
+      transition: all 0.2s ease; white-space: nowrap;
+    }
+    .poem-nav-btn:hover { border-color: var(--charcoal); color: var(--charcoal); }
+    .poem-nav-btn.active {
+      background: var(--dark); color: white;
+      border-color: var(--dark); font-weight: 500;
+    }
+
+    /* ── POEM CONTEXT ──────────────────────────── */
+    .poem-context {
+      background: var(--warm-white); border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0; padding: 18px 20px;
+      margin-bottom: 28px;
+    }
+    .poem-context p { font-size: 14px; color: var(--muted); margin-bottom: 0; font-style: italic; }
+
+    /* ── TOGGLE BUTTONS ────────────────────────── */
+    .poem-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+    .toggle-btn {
+      font-family: var(--font-body); font-size: 13px; font-weight: 500;
+      padding: 8px 16px; border-radius: 100px;
+      border: 1.5px solid var(--sand); background: transparent;
+      color: var(--muted); cursor: pointer;
+      transition: all 0.25s ease; display: inline-flex;
+      align-items: center; gap: 7px; user-select: none;
+    }
+    .toggle-btn .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sand); transition: background 0.25s ease;
+    }
+    .toggle-btn:hover { border-color: var(--charcoal); color: var(--charcoal); }
+    .toggle-btn.active-pauses { border-color: var(--terracotta); color: var(--terracotta); background: var(--terracotta-light); }
+    .toggle-btn.active-pauses .dot { background: var(--terracotta); }
+    .toggle-btn.active-linking { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+    .toggle-btn.active-linking .dot { background: var(--teal); }
+    .toggle-btn.active-stress { border-color: var(--dark); color: var(--dark); background: rgba(26,26,26,0.06); }
+    .toggle-btn.active-stress .dot { background: var(--dark); }
+
+    /* ── POEM DISPLAY ──────────────────────────── */
+    .poem-container {
+      background: white; border: 1px solid var(--cream);
+      border-radius: 10px; padding: 36px 32px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.03);
+      transition: opacity 0.3s ease;
+    }
+    @media (max-width: 540px) { .poem-container { padding: 24px 18px; } }
+    .poem-title-line {
+      font-family: var(--font-display); font-size: 19px;
+      font-weight: 600; color: var(--dark); margin-bottom: 3px;
+    }
+    .poem-author-line {
+      font-family: var(--font-body); font-size: 13px;
+      color: var(--muted); font-weight: 400; margin-bottom: 24px;
+    }
+    .poem-stanza { margin-bottom: 22px; }
+    .poem-stanza:last-child { margin-bottom: 0; }
+    .poem-line {
+      font-family: var(--font-poem); font-size: clamp(16px, 2.8vw, 19px);
+      line-height: 2; color: var(--charcoal); font-weight: 400;
+      position: relative;
+    }
+
+    /* ── OVERLAYS ───────────────────────────────── */
+    .pause-mark {
+      display: none; color: var(--terracotta);
+      font-family: var(--font-body); font-size: 13px;
+      font-weight: 600; margin: 0 3px;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .show-pauses .pause-mark { display: inline; opacity: 1; }
+
+    .link-group {
+      position: relative; transition: background 0.3s ease;
+      border-radius: 3px; padding: 0 2px;
+    }
+    .show-linking .link-group { background: var(--teal-light); }
+    .link-bridge {
+      position: absolute; bottom: 2px; left: 6px; right: 6px;
+      height: 0; border-bottom: 2px solid transparent;
+      border-radius: 0 0 8px 8px; transition: all 0.3s ease; pointer-events: none;
+    }
+    .show-linking .link-bridge {
+      height: 5px; border-bottom-color: var(--teal);
+      border-left: 2px solid var(--teal); border-right: 2px solid var(--teal);
+    }
+    .link-phonetic {
+      display: none; font-family: var(--font-body); font-size: 10px;
+      font-weight: 500; color: var(--teal); letter-spacing: 0.5px;
+      position: absolute; bottom: -15px; left: 50%;
+      transform: translateX(-50%); white-space: nowrap;
+    }
+    .show-linking .link-phonetic { display: block; }
+
+    .stress-word { transition: font-weight 0.3s ease, color 0.3s ease; }
+    .show-stress .stress-word { font-weight: 700; color: var(--dark); }
+
+    /* ── LEGEND ─────────────────────────────────── */
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 18px; margin-top: 20px;
+      padding-top: 14px; border-top: 1px solid var(--cream);
+    }
+    .legend-item { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+    .legend-swatch { width: 10px; height: 10px; border-radius: 3px; }
+
+    /* ── ACCORDION ──────────────────────────────── */
+    .accordion-item {
+      border: 1px solid var(--cream); border-radius: 8px;
+      margin-bottom: 10px; overflow: hidden; background: white;
+      transition: box-shadow 0.2s ease;
+    }
+    .accordion-item:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .accordion-header {
+      width: 100%; background: none; border: none;
+      padding: 18px 22px; display: flex;
+      justify-content: space-between; align-items: center;
+      cursor: pointer; font-family: var(--font-body); text-align: left;
+    }
+    .accordion-header:focus-visible { outline: 2px solid var(--teal); outline-offset: -2px; }
+    .accordion-phrase { font-family: var(--font-poem); font-size: 17px; font-style: italic; color: var(--dark); }
+    .accordion-tag {
+      font-family: var(--font-body); font-size: 11px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--teal); margin-left: 10px; white-space: nowrap;
+    }
+    .accordion-chevron {
+      width: 18px; height: 18px; color: var(--muted);
+      flex-shrink: 0; transition: transform 0.3s ease;
+    }
+    .accordion-item.open .accordion-chevron { transform: rotate(180deg); }
+    .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .accordion-content { padding: 0 22px 22px; border-top: 1px solid var(--cream); padding-top: 18px; }
+    .accordion-content h4 {
+      font-family: var(--font-display); font-size: 14px;
+      font-weight: 600; margin-bottom: 6px; color: var(--dark);
+    }
+    .accordion-content p { font-size: 13.5px; color: var(--muted); font-weight: 300; margin-bottom: 10px; }
+    .accordion-content p:last-child { margin-bottom: 0; }
+    .phonetic-example {
+      display: inline-block; background: var(--warm-white);
+      border: 1px solid var(--cream); border-radius: 6px;
+      padding: 5px 12px; font-family: var(--font-body);
+      font-size: 14px; color: var(--teal); font-weight: 500;
+      letter-spacing: 0.5px; margin: 6px 0;
+    }
+    .tip-box {
+      background: var(--terracotta-light); border-left: 3px solid var(--terracotta);
+      border-radius: 0 6px 6px 0; padding: 12px 16px; margin-top: 10px;
+    }
+    .tip-box p { font-size: 13px; color: var(--terracotta); font-weight: 400; margin-bottom: 0; }
+    .tip-box strong { font-weight: 600; }
+
+    /* ── FOOTER ─────────────────────────────────── */
+    footer { text-align: center; padding: 36px 0; border-top: 1px solid var(--cream); }
+    footer p { font-size: 12px; color: var(--sand); margin-bottom: 0; }
+
+    /* ── ANIMATION ──────────────────────────────── */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.4s ease forwards; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════ HEADER ═══════ -->
+  <header>
+    <div class="container">
+      <p class="overline">Pronunciation Lessons</p>
+      <h1>English Rhythm &amp; Flow</h1>
+      <p class="subtitle">Learn natural pronunciation through classic poetry</p>
+    </div>
+  </header>
+
+  <!-- ═══════ INTRODUCTION ═══════ -->
+  <section id="intro">
+    <div class="container">
+      <p class="section-label">About This Lesson</p>
+      <h2>How English Really Sounds</h2>
+      <p>
+        Native English speakers don't say words one at a time. They group words into smooth phrases, blend sounds together, and stress the words that carry meaning. The rest gets swallowed, reduced, or linked.
+      </p>
+      <p>
+        We're going to use <strong>classic poems</strong> to practice these patterns. Poems are perfect because each line is short enough to repeat, and the rhythm is built right into the words.
+      </p>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <span class="icon">🔲</span>
+          <h3>Thought Groups</h3>
+          <p>Words chunked into phrases with tiny pauses between them. This is the <strong>rhythm</strong> of English.</p>
+        </div>
+        <div class="concept-card">
+          <span class="icon">🔗</span>
+          <h3>Linking Sounds</h3>
+          <p>The end of one word flows into the next. Sometimes a new sound appears between them — like a ghost consonant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ INTERACTIVE POEM ═══════ -->
+  <section id="poem-section">
+    <div class="container">
+      <p class="section-label">Interactive Reading</p>
+      <h2>Explore the Poems</h2>
+      <p>Choose a poem, then toggle the overlays to see how it sounds when spoken naturally.</p>
+
+      <!-- Poem navigation -->
+      <div class="poem-nav" id="poem-nav"></div>
+
+      <!-- Context blurb -->
+      <div class="poem-context" id="poem-context"></div>
+
+      <!-- Toggle controls -->
+      <div class="poem-controls" role="toolbar" aria-label="Poem overlay controls">
+        <button class="toggle-btn" id="toggle-pauses" aria-pressed="false" onclick="toggleOverlay('pauses')">
+          <span class="dot"></span> Show Pauses
+        </button>
+        <button class="toggle-btn" id="toggle-linking" aria-pressed="false" onclick="toggleOverlay('linking')">
+          <span class="dot"></span> Show Linking
+        </button>
+        <button class="toggle-btn" id="toggle-stress" aria-pressed="false" onclick="toggleOverlay('stress')">
+          <span class="dot"></span> Show Stress
+        </button>
+      </div>
+
+      <!-- Poem display -->
+      <div class="poem-container" id="poem-display"></div>
+
+      <!-- Legend -->
+      <div class="legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--terracotta)"></span> Pauses</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--teal)"></span> Linked sounds</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--dark)"></span> Stressed words</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ DEEP DIVE ═══════ -->
+  <section id="deep-dive">
+    <div class="container">
+      <p class="section-label">Deep Dive</p>
+      <h2>Tricky Sounds, Explained</h2>
+      <p>Click each phrase to learn exactly what's happening — and how to practice it.</p>
+      <div id="accordion-container"></div>
+    </div>
+  </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer>
+    <div class="container"><p>An interactive lesson for ESL pronunciation practice.</p></div>
+  </footer>
+
+  <!-- ═══════ SCRIPTS ═══════ -->
+  <script src="poems.js"></script>
+  <script>
+    // ── STATE ──────────────────────────────────────
+    let currentPoemIndex = 0;
+    const overlayState = { pauses: false, linking: false, stress: false };
+
+    // ── RENDER POEM NAV ───────────────────────────
+    function renderNav() {
+      const nav = document.getElementById('poem-nav');
+      nav.innerHTML = POEMS.map((p, i) => {
+        const short = p.title.length > 28 ? p.title.slice(0, 26) + '…' : p.title;
+        return `<button class="poem-nav-btn${i === currentPoemIndex ? ' active' : ''}" onclick="selectPoem(${i})">${short}</button>`;
+      }).join('');
+    }
+
+    // ── RENDER POEM ───────────────────────────────
+    function renderPoem() {
+      const poem = POEMS[currentPoemIndex];
+      const display = document.getElementById('poem-display');
+      const ctx = document.getElementById('poem-context');
+
+      // Build overlay classes
+      let cls = 'poem-container';
+      if (overlayState.pauses) cls += ' show-pauses';
+      if (overlayState.linking) cls += ' show-linking';
+      if (overlayState.stress) cls += ' show-stress';
+
+      // Context
+      ctx.innerHTML = `<p>${poem.context}</p>`;
+
+      // Poem header + stanzas
+      let html = `<p class="poem-title-line">${poem.title}</p>`;
+      html += `<p class="poem-author-line">${poem.author}, ${poem.year}</p>`;
+
+      poem.stanzas.forEach(stanza => {
+        html += '<div class="poem-stanza">';
+        stanza.forEach(line => {
+          html += '<div class="poem-line">';
+          line.forEach(seg => {
+            if (seg.p) {
+              html += '<span class="pause-mark">‖</span>';
+            } else if (seg.l) {
+              html += `<span class="link-group">${esc(seg.t)}<span class="link-bridge"></span><span class="link-phonetic">${esc(seg.l)}</span></span>`;
+            } else if (seg.s) {
+              html += `<span class="stress-word">${esc(seg.t)}</span>`;
+            } else {
+              html += esc(seg.t);
+            }
+          });
+          html += '</div>';
+        });
+        html += '</div>';
+      });
+
+      display.className = cls;
+      display.innerHTML = html;
+    }
+
+    // ── RENDER DEEP DIVE ──────────────────────────
+    function renderDeepDive() {
+      const poem = POEMS[currentPoemIndex];
+      const container = document.getElementById('accordion-container');
+
+      container.innerHTML = poem.deepDive.map((card, i) => {
+        const id = `acc-${currentPoemIndex}-${i}`;
+        return `
+          <div class="accordion-item" id="${id}">
+            <button class="accordion-header" onclick="toggleAccordion('${id}')" aria-expanded="false">
+              <span>
+                <span class="accordion-phrase">${card.phrase}</span>
+                <span class="accordion-tag">${card.tag}</span>
+              </span>
+              <svg class="accordion-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                <h4>What's Happening</h4>
+                <p>${card.what}</p>
+                <div class="phonetic-example">${card.phonetic}</div>
+                <h4>How to Practice</h4>
+                <p>${card.practice}</p>
+                <div class="tip-box"><p><strong>🎯 Tip:</strong> ${card.tip}</p></div>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    // ── SELECT POEM ───────────────────────────────
+    function selectPoem(index) {
+      currentPoemIndex = index;
+      renderNav();
+      renderPoem();
+      renderDeepDive();
+      // Smooth scroll to poem section
+      document.getElementById('poem-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ── TOGGLE OVERLAY ────────────────────────────
+    function toggleOverlay(type) {
+      overlayState[type] = !overlayState[type];
+      const btn = document.getElementById('toggle-' + type);
+      const classMap = { pauses: 'active-pauses', linking: 'active-linking', stress: 'active-stress' };
+      btn.classList.toggle(classMap[type], overlayState[type]);
+      btn.setAttribute('aria-pressed', overlayState[type]);
+
+      const display = document.getElementById('poem-display');
+      const poemClassMap = { pauses: 'show-pauses', linking: 'show-linking', stress: 'show-stress' };
+      display.classList.toggle(poemClassMap[type], overlayState[type]);
+    }
+
+    // ── ACCORDION ─────────────────────────────────
+    function toggleAccordion(id) {
+      const item = document.getElementById(id);
+      const body = item.querySelector('.accordion-body');
+      const header = item.querySelector('.accordion-header');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.accordion-item.open').forEach(el => {
+        if (el.id !== id) {
+          el.classList.remove('open');
+          el.querySelector('.accordion-body').style.maxHeight = null;
+          el.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('open');
+        body.style.maxHeight = null;
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        header.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // ── UTIL ──────────────────────────────────────
+    function esc(str) {
+      const d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
+    // ── INIT ──────────────────────────────────────
+    renderNav();
+    renderPoem();
+    renderDeepDive();
+  </script>
+
+</body>
+</html>
