@@ -38,6 +38,21 @@ const POEMS = [
       [{ t: 'and', l:'an·dso' },{ t: ' so ' },{ t: 'cold', s:1 }]
     ]
   ],
+  meaning: [
+    {
+      lines: ["I have eaten", "the plums", "that were in", "the icebox"],
+      explanation: "The speaker confesses to eating the fruit. The tone is incredibly casual and direct, mimicking a rushed note left on a kitchen counter.",
+      vocab: ["icebox: an old-fashioned term for a refrigerator"]
+    },
+    {
+      lines: ["and which", "you were probably", "saving", "for breakfast"],
+      explanation: "The speaker acknowledges that they knew the plums were being saved, adding a layer of mild, almost playful guilt to the confession."
+    },
+    {
+      lines: ["Forgive me", "they were delicious", "so sweet", "and so cold"],
+      explanation: "The final apology is undercut by how much the speaker enjoyed the plums. The sensory details ('sweet', 'cold') make the temptation understandable."
+    }
+  ],
   deepDive: [
     {
       phrase: '"the icebox"',
@@ -91,6 +106,26 @@ const POEMS = [
       [{ t: 'chickens', s:1 }]
     ]
   ],
+  meaning: [
+    {
+      lines: ["so much depends", "upon"],
+      explanation: "The opening creates immediate suspense. It tells us that the ordinary object we are about to see is somehow vitally important."
+    },
+    {
+      lines: ["a red wheel", "barrow"],
+      explanation: "The central image is presented. Breaking 'wheelbarrow' across two lines forces us to look at its component parts (the wheel, the barrow) rather than just the whole.",
+      vocab: ["wheelbarrow: a small cart with a single wheel at the front, used for carrying loads"]
+    },
+    {
+      lines: ["glazed with rain", "water"],
+      explanation: "The visual details make the object vivid. 'Glazed' implies a shiny, almost artistic surface, elevating a simple farm tool to a beautiful object.",
+      vocab: ["glazed: covered with a smooth, shiny coating or finish"]
+    },
+    {
+      lines: ["beside the white", "chickens"],
+      explanation: "The final detail adds color contrast (red, white) and life (chickens) to the still life, grounding it in a working farm setting."
+    }
+  ],
   deepDive: [
     {
       phrase: '"so much depends"',
@@ -129,6 +164,17 @@ const POEMS = [
       [{ t: 'on ' },{ t: 'silent', s:1 },{ t: ' ' },{ t: 'haunches', s:1 },{ p:1 }],
       [{ t: 'and then ' },{ t: 'moves', s:1 },{ t: ' ' },{ t: 'on', s:1 }]
     ]
+  ],
+  meaning: [
+    {
+      lines: ["The fog comes", "on little cat feet"],
+      explanation: "The poem immediately establishes its central metaphor: the fog is like a cat. It arrives silently, softly, and without warning."
+    },
+    {
+      lines: ["It sits looking", "over harbor and city", "on silent haunches", "and then moves on"],
+      explanation: "The fog lingers temporarily, quietly observing the city, and then leaves as mysteriously as it arrived, completing the cat metaphor.",
+      vocab: ["haunches: an animal's hindquarters (buttocks and thighs)"]
+    }
   ],
   deepDive: [
     {
@@ -170,6 +216,26 @@ const POEMS = [
       [{ t: 'So ' },{ t: 'dawn', s:1 },{ t: ' goes ' },{ t: 'down', s:1 },{ t: ' to ' },{ t: 'day', s:1 },{ p:1 }],
       [{ t: 'Nothing', s:1 },{ t: ' ' },{ t: 'gold', s:1 },{ t: ' can ' },{ t: 'stay', s:1 }]
     ]
+  ],
+  meaning: [
+    {
+      lines: ["Nature's first green is gold,", "Her hardest hue to hold."],
+      explanation: "The first buds of spring are often beautifully yellow-green (gold), but this early stage is fleeting and doesn't last long.",
+      vocab: ["hue: a color or shade"]
+    },
+    {
+      lines: ["Her early leaf's a flower;", "But only so an hour."],
+      explanation: "Spring blossoms are technically the first 'leaves' of the trees, but they quickly fall away and turn into actual leaves."
+    },
+    {
+      lines: ["Then leaf subsides to leaf.", "So Eden sank to grief,"],
+      explanation: "The vibrant flowers become ordinary green leaves. The speaker compares this loss of early perfection to humanity's fall from the Garden of Eden.",
+      vocab: ["subsides: becomes less intense, sinks to a lower level"]
+    },
+    {
+      lines: ["So dawn goes down to day.", "Nothing gold can stay."],
+      explanation: "Just as a spectacular sunrise eventually becomes an ordinary day, no beautiful or pure moment can last forever."
+    }
   ],
   deepDive: [
     {
@@ -215,6 +281,21 @@ const POEMS = [
       [{ t: 'fice', s:1 }]
     ]
   ],
+  meaning: [
+    {
+      lines: ["Some say the world will end in fire,", "Some say in ice."],
+      explanation: "The speaker presents two popular theories about how the world will eventually be destroyed."
+    },
+    {
+      lines: ["From what I've tasted of desire", "I hold with those who favor fire."],
+      explanation: "Based on personal experience with passionate desire and greed (fire), the speaker agrees that these intense emotions are destructive enough to end the world."
+    },
+    {
+      lines: ["But if it had to perish twice,", "I think I know enough of hate", "To say that for destruction ice", "Is also great", "And would suffice."],
+      explanation: "However, the speaker also notes that cold, calculated hatred (ice) is equally potent. If the world had to be destroyed again, hatred would definitely do the job.",
+      vocab: ["perish: to suffer complete ruin or destruction", "suffice: be enough or adequate"]
+    }
+  ],
   deepDive: [
     {
       phrase: '"From what I\'ve tasted"',
@@ -255,6 +336,17 @@ const POEMS = [
       [{ t: 'Life', s:1 },{ t: ' is a ' },{ t: 'barren', s:1 },{ t: ' ' },{ t: 'field', s:1 },{ p:1 }],
       [{ t: 'Frozen', s:1 },{ t: ' with ' },{ t: 'snow', s:1 }]
     ]
+  ],
+  meaning: [
+    {
+      lines: ["Hold fast to dreams", "For if dreams die", "Life is a broken-winged bird", "That cannot fly"],
+      explanation: "Without dreams and goals, life becomes damaged and unable to reach its potential, much like a bird that has lost its ability to soar."
+    },
+    {
+      lines: ["Hold fast to dreams", "For when dreams go", "Life is a barren field", "Frozen with snow"],
+      explanation: "The second metaphor is even starker. Without dreams, life becomes empty and cold, incapable of growing anything new or beautiful.",
+      vocab: ["barren: too poor to produce much or any vegetation; bleak and lifeless"]
+    }
   ],
   deepDive: [
     {
@@ -314,6 +406,26 @@ const POEMS = [
       [{ t: 'And ' },{ t: 'that', s:1 },{ t: ' has made ' },{ t: 'all', s:1 },{ t: ' the ' },{ t: 'difference', s:1 }]
     ]
   ],
+  meaning: [
+    {
+      lines: ["Two roads diverged in a yellow wood,", "And sorry I could not travel both", "And be one traveler, long I stood", "And looked down one as far as I could", "To where it bent in the undergrowth;"],
+      explanation: "The speaker faces a choice between two paths in an autumn forest. They regret that as one person, they can only choose one life path, so they carefully examine the first option until they can't see any further."
+    },
+    {
+      lines: ["Then took the other, as just as fair,", "And having perhaps the better claim,", "Because it was grassy and wanted wear;", "Though as for that the passing there", "Had worn them really about the same,"],
+      explanation: "They choose the second path, initially thinking it's better because fewer people have walked it. But immediately, they admit that actually, both paths had been walked about the same amount.",
+      vocab: ["fair: beautiful or attractive", "wanted wear: needed to be walked on (it looked unused)"]
+    },
+    {
+      lines: ["And both that morning equally lay", "In leaves no step had trodden black.", "Oh, I kept the first for another day!", "Yet knowing how way leads on to way,", "I doubted if I should ever come back."],
+      explanation: "That morning, both paths were covered in fresh, unstepped-on leaves. The speaker hopes to return and take the first path someday, but realistically knows that one choice leads to another, making a return impossible.",
+      vocab: ["trodden: walked on or crushed by feet"]
+    },
+    {
+      lines: ["I shall be telling this with a sigh", "Somewhere ages and ages hence:", "Two roads diverged in a wood, and I—", "I took the one less traveled by,", "And that has made all the difference."],
+      explanation: "The speaker imagines themselves far in the future, telling this story with a sigh. They predict they will claim they took the 'less traveled' road and that it changed everything, even though they already admitted (in stanza 2) that both roads were actually the same. It's a poem about how we justify our choices later in life."
+    }
+  ],
   deepDive: [
     {
       phrase: '"Two roads diverged"',
@@ -366,6 +478,26 @@ const POEMS = [
       [{ t: 'And ' },{ t: 'miles', s:1 },{ t: ' to ' },{ t: 'go', s:1 },{ t: ' before I ' },{ t: 'sleep', s:1 },{ p:1 }],
       [{ t: 'And ' },{ t: 'miles', s:1 },{ t: ' to ' },{ t: 'go', s:1 },{ t: ' before I ' },{ t: 'sleep', s:1 }]
     ]
+  ],
+  meaning: [
+    {
+      lines: ["Whose woods these are I think I know.", "His house is in the village though;", "He will not see me stopping here", "To watch his woods fill up with snow."],
+      explanation: "The speaker pauses in a beautiful snowy forest. They know the owner lives far away in the village, so they feel safe stopping to simply watch the snow fall without being caught trespassing."
+    },
+    {
+      lines: ["My little horse must think it queer", "To stop without a farmhouse near", "Between the woods and frozen lake", "The darkest evening of the year."],
+      explanation: "The speaker projects their own sense of isolation onto the horse. Stopping in the middle of nowhere on the longest, darkest night of the year feels strange and slightly dangerous.",
+      vocab: ["queer: strange or unusual"]
+    },
+    {
+      lines: ["He gives his harness bells a shake", "To ask if there is some mistake.", "The only other sound's the sweep", "Of easy wind and downy flake."],
+      explanation: "The sudden, sharp sound of the horse's bells contrasts with the deep, soft silence of the wind and falling snow. The bells represent the demands of the real world calling the speaker back.",
+      vocab: ["downy: covered with fine, soft hair or feathers; very soft"]
+    },
+    {
+      lines: ["The woods are lovely, dark and deep,", "But I have promises to keep,", "And miles to go before I sleep,", "And miles to go before I sleep."],
+      explanation: "The dark woods are peaceful and incredibly tempting, perhaps even representing the peace of death or giving up. However, the speaker remembers their responsibilities ('promises') and forces themselves to keep going. The repetition makes the remaining journey feel long and exhausting."
+    }
   ],
   deepDive: [
     {
@@ -424,6 +556,28 @@ const POEMS = [
       [{ t: 'I', s:1 },{ t: ', ' },{ t: 'too', s:1 },{ p:1 },{ t: ' am A- ' },{ t: 'merica', s:1 }]
     ]
   ],
+  meaning: [
+    {
+      lines: ["I, too, sing America."],
+      explanation: "A direct confident assertion: the speaker claims their rightful place as part of the American chorus, responding to older poems that celebrated America but ignored Black Americans."
+    },
+    {
+      lines: ["I am the darker brother.", "They send me to eat in the kitchen", "When company comes,", "But I laugh,", "And eat well,", "And grow strong."],
+      explanation: "The speaker addresses the reality of segregation and racism, framed as a family ('brother') that hides him away. Instead of despairing, he uses this isolation to nourish himself and build his power."
+    },
+    {
+      lines: ["Tomorrow,", "I'll be at the table", "When company comes.", "Nobody'll dare", "Say to me,", "\"Eat in the kitchen,\"", "Then."],
+      explanation: "A prophetic vision of the future. The speaker predicts a time of equality where they will refuse to be hidden, and their strength will demand respect."
+    },
+    {
+      lines: ["Besides,", "They'll see how beautiful I am", "And be ashamed—"],
+      explanation: "The shift here is crucial: the respect won't just come from fear or strength, but from the dominant culture finally recognizing the beauty and value of the speaker, causing them to feel guilt for their past actions."
+    },
+    {
+      lines: ["I, too, am America."],
+      explanation: "The ultimate conclusion. He doesn't just 'sing' America anymore; he *is* America. His identity is inseparable from the nation's identity."
+    }
+  ],
   deepDive: [
     {
       phrase: '"I, too, sing America"',
@@ -471,6 +625,26 @@ const POEMS = [
     [
       [{ t: 'Or does it ' },{ t: 'ex', s:1 },{ t: '- ' },{ t: 'plode', s:1 },{ t: '?' }]
     ]
+  ],
+  meaning: [
+    {
+      lines: ["What happens to a dream deferred?"],
+      explanation: "The poem opens with its central, haunting question. When a community's hopes for equality and opportunity are constantly delayed ('deferred'), what is the consequence?",
+      vocab: ["deferred: put off to a later time; postponed"]
+    },
+    {
+      lines: ["Does it dry up", "like a raisin in the sun?", "Or fester like a sore—", "And then run?", "Does it stink like rotten meat?", "Or crust and sugar over—", "like a syrupy sweet?"],
+      explanation: "Hughes offers several possibilities, almost all of them involving rot and decay. The dream might lose its life and shrink (raisin), become a painful, infected wound (sore), spoil and go bad (meat), or become falsely sweet but hardened (syrupy sweet).",
+      vocab: ["fester: (of a wound or sore) become infected, emitting pus"]
+    },
+    {
+      lines: ["Maybe it just sags", "like a heavy load."],
+      explanation: "If it doesn't rot, maybe the unfulfilled dream just becomes a crushing, exhausting psychological burden that the dreamer has to carry forever."
+    },
+    {
+      lines: ["Or does it explode?"],
+      explanation: "The final, isolated line shifts from slow decay to sudden, violent destruction. The suggestion is that constantly denying people their dreams will eventually lead to an explosive, desperate reaction."
+    }
   ],
   deepDive: [
     {
@@ -531,6 +705,34 @@ const POEMS = [
       [{ t: 'Do ' },{ t: 'not', s:1 },{ t: ' go ' },{ t: 'gentle', s:1 },{ t: ' into ' },{ t: 'that', s:1 },{ t: ' good ' },{ t: 'night', s:1 },{ p:1 }],
       [{ t: 'Rage', s:1 },{ p:1 },{ t: ' ' },{ t: 'rage', s:1 },{ t: ' against the ' },{ t: 'dying', s:1 },{ t: ' of the ' },{ t: 'light', s:1 }]
     ]
+  ],
+  meaning: [
+    {
+      lines: ["Do not go gentle into that good night,", "Old age should burn and rave at close of day;", "Rage, rage against the dying of the light."],
+      explanation: "The core command of the poem: do not accept death peacefully ('gentle'). Even in old age, one should fight furiously with passion ('burn and rave') to stay alive.",
+      vocab: ["rave: talk wildly or incoherently, as if one were delirious", "dying of the light: a metaphor for death"]
+    },
+    {
+      lines: ["Though wise men at their end know dark is right,", "Because their words had forked no lightning they", "Do not go gentle into that good night."],
+      explanation: "Wise men understand intellectually that death ('dark') is natural and inevitable. However, because they feel they haven't made a big enough impact ('forked no lightning') with their wisdom, they refuse to die peacefully."
+    },
+    {
+      lines: ["Good men, the last wave by, crying how bright", "Their frail deeds might have danced in a green bay,", "Rage, rage against the dying of the light."],
+      explanation: "Good men, nearing the end, realize their small acts ('frail deeds') could have been beautiful and vibrant ('danced in a green bay') if they had more time, so they too fight against death."
+    },
+    {
+      lines: ["Wild men who caught and sang the sun in flight,", "And learn, too late, they grieved it on its way,", "Do not go gentle into that good night."],
+      explanation: "Adventurous, passionate men who lived intensely ('caught and sang the sun') eventually realize that time flew by too quickly and their actions hastened their end. They refuse to accept it easily."
+    },
+    {
+      lines: ["Grave men, near death, who see with blinding sight", "Blind eyes could blaze like meteors and be gay,", "Rage, rage against the dying of the light."],
+      explanation: "Serious men facing death ('grave' is a pun here) suddenly see clearly ('blinding sight') that even fading, failing bodies ('blind eyes') can still have moments of fierce, spectacular joy ('blaze like meteors').",
+      vocab: ["grave: very serious; also a place of burial"]
+    },
+    {
+      lines: ["And you, my father, there on the sad height,", "Curse, bless, me now with your fierce tears, I pray.", "Do not go gentle into that good night.", "Rage, rage against the dying of the light."],
+      explanation: "The poem suddenly becomes intensely personal. The speaker addresses their dying father, begging him to show any emotion—even anger or cursing—just to prove he is still fighting for life."
+    }
   ],
   deepDive: [
     {
