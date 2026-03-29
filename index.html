@@ -86,9 +86,16 @@
 
     /* ── POEM SELECTOR ─────────────────────────── */
     .poem-nav {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;
-      padding-bottom: 20px; border-bottom: 1px solid var(--cream);
+      margin-bottom: 32px;
+      padding-bottom: 24px; border-bottom: 1px solid var(--cream);
     }
+    .level-section { margin-bottom: 20px; }
+    .level-section:last-child { margin-bottom: 0; }
+    .level-header {
+      font-family: var(--font-display); font-size: 16px;
+      font-weight: 600; color: var(--dark); margin-bottom: 12px;
+    }
+    .poem-nav-group { display: flex; gap: 8px; flex-wrap: wrap; }
     .poem-nav-btn {
       font-family: var(--font-body); font-size: 12px; font-weight: 400;
       padding: 7px 14px; border-radius: 100px;
@@ -382,10 +389,32 @@
     // ── RENDER POEM NAV ───────────────────────────
     function renderNav() {
       const nav = document.getElementById('poem-nav');
-      nav.innerHTML = POEMS.map((p, i) => {
-        const short = p.title.length > 28 ? p.title.slice(0, 26) + '…' : p.title;
-        return `<button class="poem-nav-btn${i === currentPoemIndex ? ' active' : ''}" onclick="selectPoem(${i})">${short}</button>`;
-      }).join('');
+      const levels = ['Beginner', 'Intermediate', 'Advanced'];
+      
+      let html = '';
+      levels.forEach(level => {
+        const poemsInLevel = POEMS.map((p, i) => ({...p, originalIndex: i})).filter(p => {
+           // Provide fallback for uncategorized
+           if (p.level) return p.level === level;
+           return level === 'Beginner';
+        });
+        
+        if (poemsInLevel.length === 0) return;
+        
+        html += `<div class="level-section">
+          <h3 class="level-header">${level}</h3>
+          <div class="poem-nav-group">`;
+          
+        poemsInLevel.forEach(p => {
+          const short = p.title.length > 28 ? p.title.slice(0, 26) + '…' : p.title;
+          const activeClass = p.originalIndex === currentPoemIndex ? ' active' : '';
+          html += `<button class="poem-nav-btn${activeClass}" onclick="selectPoem(${p.originalIndex})">${short}</button>`;
+        });
+        
+        html += `</div></div>`;
+      });
+      
+      nav.innerHTML = html;
     }
 
     // ── RENDER POEM ───────────────────────────────

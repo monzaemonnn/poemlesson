@@ -17,6 +17,7 @@ const POEMS = [
   title: 'This Is Just To Say',
   author: 'William Carlos Williams',
   year: 1934,
+  level: 'Beginner',
   context: 'A casual note left on a kitchen counter — someone ate the plums their roommate was saving and feels a little guilty, but not really. It sounds exactly like everyday speech.',
   stanzas: [
     [
@@ -87,6 +88,7 @@ const POEMS = [
   title: 'The Red Wheelbarrow',
   author: 'William Carlos Williams',
   year: 1923,
+  level: 'Beginner',
   context: 'A single sentence broken into tiny, precise pieces — like a photograph in slow motion. Everything depends on paying attention to ordinary things.',
   stanzas: [
     [
@@ -152,6 +154,7 @@ const POEMS = [
   title: 'Fog',
   author: 'Carl Sandburg',
   year: 1916,
+  level: 'Beginner',
   context: 'A tiny, perfect poem comparing fog rolling in over a harbor to a cat silently sitting and watching. Just six lines of pure imagery.',
   stanzas: [
     [
@@ -202,6 +205,7 @@ const POEMS = [
   title: 'Nothing Gold Can Stay',
   author: 'Robert Frost',
   year: 1923,
+  level: 'Intermediate',
   context: 'A meditation on how all beautiful, precious things are temporary. The first green of spring, the Garden of Eden, dawn — nothing golden lasts. Eight perfect lines.',
   stanzas: [
     [
@@ -263,6 +267,7 @@ const POEMS = [
   title: 'Fire and Ice',
   author: 'Robert Frost',
   year: 1920,
+  level: 'Intermediate',
   context: 'A deceptively simple poem about how the world might end — through the fire of desire or the ice of hatred. Casual tone, but devastatingly precise.',
   stanzas: [
     [
@@ -322,6 +327,7 @@ const POEMS = [
   title: 'Dreams',
   author: 'Langston Hughes',
   year: 1922,
+  level: 'Beginner',
   context: 'A short, urgent poem about holding onto your dreams. Without dreams, life is a broken-winged bird or a barren frozen field. Simple words, powerful imagery.',
   stanzas: [
     [
@@ -374,6 +380,7 @@ const POEMS = [
   title: 'The Road Not Taken',
   author: 'Robert Frost',
   year: 1916,
+  level: 'Intermediate',
   context: 'The most famous poem about choices — a traveler at a fork in a yellow wood. Often misread as inspirational, it\'s actually more wistful and ironic: both roads were really about the same.',
   stanzas: [
     [
@@ -452,6 +459,7 @@ const POEMS = [
   title: 'Stopping by Woods on a Snowy Evening',
   author: 'Robert Frost',
   year: 1923,
+  level: 'Intermediate',
   context: 'A traveler pauses to watch snow fill the dark woods — it\'s beautiful and tempting to stay, but he has "miles to go before I sleep." A poem about duty, beauty, and maybe something darker.',
   stanzas: [
     [
@@ -525,6 +533,7 @@ const POEMS = [
   title: 'I, Too',
   author: 'Langston Hughes',
   year: 1926,
+  level: 'Beginner',
   context: 'A response to Walt Whitman\'s "I Hear America Singing." Hughes declares that he, too, is American — despite being sent to eat in the kitchen when company comes. Defiant, dignified, and forward-looking.',
   stanzas: [
     [
@@ -604,6 +613,7 @@ const POEMS = [
   title: 'Harlem (A Dream Deferred)',
   author: 'Langston Hughes',
   year: 1951,
+  level: 'Intermediate',
   context: 'What happens to a dream you have to postpone? Does it dry up? Rot? Explode? A poem made of questions that hits like a gut punch. One of the most quoted poems in American literature.',
   stanzas: [
     [
@@ -672,6 +682,7 @@ const POEMS = [
   title: 'Do Not Go Gentle into That Good Night',
   author: 'Dylan Thomas',
   year: 1951,
+  level: 'Advanced',
   context: 'Written as Thomas\'s father was dying. A fierce villanelle demanding that we fight against death — rage against the dying of the light. One of the most powerful poems in the English language.',
   stanzas: [
     [
@@ -750,6 +761,285 @@ const POEMS = [
       phonetic: '/ðə <strong>daɪ</strong>ɪŋ əv ðə <strong>laɪt</strong>/',
       practice: 'The words "the," "of," "the" are all reduced to /ðə/. Glide through them quickly and land firmly on "DY-ing" and "LIGHT."',
       tip: 'The shared /aɪ/ vowel in "dying" and "light" is intentional — it binds the two key words together sonically. Make that vowel ring both times.'
+    }
+  ]
+},
+
+// ═══════════════════════ 12 ═══════════════════════
+{
+  id: 'hope-is-the-thing',
+  title: '"Hope" is the thing with feathers',
+  author: 'Emily Dickinson',
+  year: 1891,
+  level: 'Beginner',
+  context: 'A beautiful poem comparing hope to a bird that sings eternally in the soul, asking for nothing in return, even in the coldest storms.',
+  stanzas: [
+    [
+      [{ t: '"Hope" ', s:1 },{ t: 'is the ' },{ t: 'thing ', s:1 },{ t: 'with ' },{ t: 'feathers', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'That ' },{ t: 'perches ', s:1 },{ t: 'in the ' },{ t: 'soul', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'And ' },{ t: 'sings ', s:1 },{ t: 'the ' },{ t: 'tune ', s:1 },{ t: 'without the ' },{ t: 'words', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'And ' },{ t: 'never ', s:1 },{ t: 'stops', s:1 },{ t: '—' },{ t: ' at ', l:'a·tall' },{ t: 'all', s:1 },{ t: '—' },{ p:1 }]
+    ],
+    [
+      [{ t: 'And ' },{ t: 'sweetest ', s:1 },{ t: '—in the ' },{ t: 'Gale', s:1 },{ t: '—' },{ t: 'is ' },{ t: 'heard', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'And ' },{ t: 'sore ', s:1 },{ t: 'must be the ' },{ t: 'storm', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'That could a- ' },{ t: 'bash ', s:1 },{ t: 'the little ' },{ t: 'Bird', s:1 },{ p:1 }],
+      [{ t: 'That ' },{ t: 'kept ', s:1 },{ t: 'so many ' },{ t: 'warm', s:1 },{ t: '—' },{ p:1 }]
+    ],
+    [
+      [{ t: 'I\'ve ' },{ t: 'heard ', s:1 },{ t: 'it in the ' },{ t: 'chillest ', s:1 },{ t: 'land', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'And on the ' },{ t: 'strangest ', s:1 },{ t: 'Sea', s:1 },{ t: '—' },{ p:1 }],
+      [{ t: 'Yet, ' },{ t: 'never', s:1 },{ t: ', in Ex- ' },{ t: 'tremity', s:1 },{ t: ',' },{ p:1 }],
+      [{ t: 'It ' },{ t: 'asked ', s:1 },{ t: 'a ' },{ t: 'crumb', s:1 },{ t: '—' },{ t: 'of ', l:'uh·vme' },{ t: 'Me.', s:1 }]
+    ]
+  ],
+  meaning: [
+    {
+      lines: ["\"Hope\" is the thing with feathers—", "That perches in the soul—"],
+      explanation: "Hope is personified as a small bird that lives unconditionally inside the human spirit."
+    },
+    {
+      lines: ["And sings the tune without the words—", "And never stops— at all—"],
+      explanation: "This feeling of hope doesn't rely on logic or reasons ('without the words') and is a constant, unending presence."
+    },
+    {
+      lines: ["And sweetest—in the Gale—is heard—", "And sore must be the storm—", "That could abash the little Bird", "That kept so many warm—"],
+      explanation: "Hope feels the most beautiful and necessary during terrible storms (hard times). Only overwhelming disaster could possibly silence ('abash') this comforting inner bird.",
+      vocab: ["Gale: a very strong wind", "abash: to destroy the self-confidence of; to silence or make ashamed"]
+    },
+    {
+      lines: ["I've heard it in the chillest land—", "And on the strangest Sea—", "Yet, never, in Extremity,", "It asked a crumb—of Me."],
+      explanation: "Even in the coldest, most isolated, and completely extreme situations, this inner hope continues to give support without ever demanding anything in return.",
+      vocab: ["Extremity: the furthest point or limit; extreme hardship"]
+    }
+  ],
+  deepDive: [
+    {
+      phrase: '"stops— at all—"',
+      tag: 'Linking into Vowel',
+      what: 'The /s/ at the end of "stops" attaches to "at", making "stop-sat". Then the /t/ of "at" links to "all", creating a flap-t: "a-tall".',
+      phonetic: 'stops at all → /stɑp <strong>səɾ</strong>ɔl/',
+      practice: 'Say it as one smooth word without breaking the breath: stop-suh-tall.',
+      tip: 'This is why English speakers sound so fast! They rarely separate words that end in a consonant and start with a vowel.'
+    }
+  ]
+},
+
+// ═══════════════════════ 13 ═══════════════════════
+{
+  id: 'the-tyger',
+  title: 'The Tyger',
+  author: 'William Blake',
+  year: 1794,
+  level: 'Beginner',
+  context: 'A thumping, hypnotic poem asking a profound question: what kind of terrifying creator could have made a creature as fierce and beautiful as a tiger?',
+  stanzas: [
+    [
+      [{ t: 'Tyger ', s:1 },{ t: 'Tyger, ', s:1 },{ t: 'burning ', s:1 },{ t: 'bright', s:1 },{ p:1 }],
+      [{ t: 'In the ' },{ t: 'forests ', s:1 },{ t: 'of the ' },{ t: 'night', s:1 },{ t: ';' },{ p:1 }],
+      [{ t: 'What im- ' },{ t: 'mortal ', s:1 },{ t: 'hand ', s:1 },{ t: 'or ' },{ t: 'eye', s:1 },{ t: ',' },{ p:1 }],
+      [{ t: 'Could ' },{ t: 'frame ', s:1 },{ t: 'thy ' },{ t: 'fearful ', s:1 },{ t: 'sym- ', s:1 },{ t: 'metry?', s:1 },{ p:1 }]
+    ]
+  ],
+  meaning: [
+    {
+      lines: ["Tyger Tyger, burning bright", "In the forests of the night;"],
+      explanation: "The tiger is pictured as incredibly radiant and powerful, glowing ('burning') dangerously in the middle of a dark, wild forest."
+    },
+    {
+      lines: ["What immortal hand or eye,", "Could frame thy fearful symmetry?"],
+      explanation: "The central question: What kind of god ('immortal hand') could create something that is so perfectly designed ('symmetry') yet so terrifying ('fearful')?",
+      vocab: ["immortal: living forever; divine", "symmetry: perfect proportion and balance"]
+    }
+  ],
+  deepDive: [
+    {
+      phrase: '"Tyger Tyger"',
+      tag: 'Trochaic Meter',
+      what: 'Unlike the common iambic (da-DUM) rhythm, this relies on trochees: DUM-da DUM-da DUM-da DUM. It gives the poem a heavy, hammering, chant-like beat.',
+      phonetic: '/<strong>taɪ</strong>gər <strong>taɪ</strong>gər/',
+      practice: 'Emphasize the first syllable heavily. TY-ger, TY-ger, BURN-ing BRIGHT. It should almost sound like a drumbeat.',
+      tip: 'Try walking to the beat of this line. Your foot should hit the ground hard on "TY-", "TY-", "BURN-", and "BRIGHT".'
+    }
+  ]
+},
+
+// ═══════════════════════ 14 ═══════════════════════
+{
+  id: 'ozymandias',
+  title: 'Ozymandias',
+  author: 'Percy Bysshe Shelley',
+  year: 1818,
+  level: 'Intermediate',
+  context: 'A traveler tells the speaker about a shattered, colossal statue of an ancient king buried in the sand. It is a famous meditation on the temporary nature of power and human pride.',
+  stanzas: [
+    [
+      [{ t: 'I ' },{ t: 'met ', s:1 },{ t: 'a ' },{ t: 'traveller ', s:1 },{ t: 'from an ' },{ t: 'antique ', s:1 },{ t: 'land', s:1 },{ p:1 }],
+      [{ t: 'Who ' },{ t: 'said', s:1 },{ t: '—' },{ t: 'Two ' },{ t: 'vast ', s:1 },{ t: 'and ' },{ t: 'trunkless ', s:1 },{ t: 'legs ', s:1 },{ t: 'of ' },{ t: 'stone', s:1 },{ p:1 }],
+      [{ t: 'Stand ', s:1 },{ t: 'in the ' },{ t: 'desert', s:1 },{ t: '...', p:1 },{ t: ' ' },{ t: 'Near ', s:1 },{ t: 'them', s:1 },{ t: ', on the ' },{ t: 'sand', s:1 },{ t: ',', p:1 }],
+      [{ t: 'Half ' },{ t: 'sunk', s:1 },{ t: ' a ' },{ t: 'shattered ', s:1 },{ t: 'visage ', s:1 },{ t: 'lies', s:1 },{ t: ', whose ' },{ t: 'frown', s:1 },{ t: ',', p:1 }],
+      [{ t: 'And ' },{ t: 'wrinkled ', s:1 },{ t: 'lip', s:1 },{ t: ', and ' },{ t: 'sneer ', s:1 },{ t: 'of ' },{ t: 'cold ', s:1 },{ t: 'command', s:1 },{ t: ',', p:1 }]
+    ],
+    [
+      [{ t: 'Tell ', s:1 },{ t: 'that its ' },{ t: 'sculptor ', s:1 },{ t: 'well ', s:1 },{ t: 'those ' },{ t: 'passions ', s:1 },{ t: 'read', s:1 },{ p:1 }],
+      [{ t: 'Which yet sur- ', l:'sur·vive' },{ t: 'vive', s:1 },{ t: ', ', p:1 },{ t: 'stamped ', s:1 },{ t: 'on these ' },{ t: 'lifeless ', s:1 },{ t: 'things', s:1 },{ t: ',', p:1 }],
+      [{ t: 'The ' },{ t: 'hand ', s:1 },{ t: 'that ' },{ t: 'mocked ', s:1 },{ t: 'them, and the ' },{ t: 'heart ', s:1 },{ t: 'that ' },{ t: 'fed', s:1 },{ t: ';', p:1 }]
+    ],
+    [
+      [{ t: 'And on the ' },{ t: 'pedestal ', s:1 },{ t: 'these ' },{ t: 'words ', s:1 },{ t: 'ap- ' },{ t: 'pear', s:1 },{ t: ':', p:1 }],
+      [{ t: 'My ' },{ t: 'name ', s:1 },{ t: 'is ' },{ t: 'Ozy- ', s:1 },{ t: 'mandias', s:1 },{ t: ', ' },{ t: 'King ', s:1 },{ t: 'of ' },{ t: 'Kings', s:1 },{ t: ';', p:1 }],
+      [{ t: 'Look ', s:1 },{ t: 'on my ' },{ t: 'Works', s:1 },{ t: ', ye ' },{ t: 'Mighty', s:1 },{ t: ', and de- ' },{ t: 'spair!', s:1 },{ p:1 }]
+    ],
+    [
+      [{ t: 'Nothing ', s:1 },{ t: 'beside ', s:1 },{ t: 're- ' },{ t: 'mains', s:1 },{ t: '. ', p:1 },{ t: 'Round the de- ' },{ t: 'cay', s:1 },{ p:1 }],
+      [{ t: 'Of that ' },{ t: 'colossal ', s:1 },{ t: 'Wreck', s:1 },{ t: ', ', p:1 },{ t: 'boundless ', s:1 },{ t: 'and ' },{ t: 'bare', s:1 },{ p:1 }],
+      [{ t: 'The ' },{ t: 'lone ', s:1 },{ t: 'and ' },{ t: 'level ', s:1 },{ t: 'sands ', s:1 },{ t: 'stretch ', s:1 },{ t: 'far ', s:1 },{ t: 'a- ' },{ t: 'way', s:1 },{ t: '.', p:1 }]
+    ]
+  ],
+  meaning: [
+    {
+      lines: ["I met a traveller from an antique land", "Who said—Two vast and trunkless legs of stone", "Stand in the desert... Near them, on the sand,", "Half sunk a shattered visage lies"],
+      explanation: "A traveler describes ruins in the desert. Only the legs of the giant statue remain standing, while the broken face ('shattered visage') lies half-buried in the sand."
+    },
+    {
+      lines: ["whose frown,", "And wrinkled lip, and sneer of cold command,", "Tell that its sculptor well those passions read"],
+      explanation: "The statue's face still shows a cruel, arrogant sneer. The sculptor accurately captured the king's harsh personality in the stone."
+    },
+    {
+      lines: ["And on the pedestal these words appear:", "My name is Ozymandias, King of Kings;", "Look on my Works, ye Mighty, and despair!"],
+      explanation: "The inscription on the base boasts of Ozymandias' supreme power, warning other great rulers to look at his vast empire and feel hopeless beside his greatness."
+    },
+    {
+      lines: ["Nothing beside remains. Round the decay", "Of that colossal Wreck, boundless and bare", "The lone and level sands stretch far away."],
+      explanation: "The ultimate irony: despite the arrogant boast, absolutely nothing is left of the 'Works'. There is only endless, empty sand around a broken statue, proving that time destroys all human power."
+    }
+  ],
+  deepDive: [
+    {
+      phrase: '"lone and level sands stretch"',
+      tag: 'Alliteration + Cluster Focus',
+      what: 'The repeated "L" and "S" sounds mimic the endless, whispering quality of the blowing sand. "Sands stretch" forces you to articulate /ndz·str/ — a massive consonant cluster that slows the ending down.',
+      phonetic: '/sændz strɛtʃ/',
+      practice: 'Take it slow. Say "sands" — hold the Z sound — then blast into "stretch." The effort required makes the line feel as long and heavy as the desert itself.'
+    }
+  ]
+},
+
+// ═══════════════════════ 15 ═══════════════════════
+{
+  id: 'invictus',
+  title: 'Invictus',
+  author: 'William Ernest Henley',
+  year: 1888,
+  level: 'Intermediate',
+  context: 'A deeply stoic poem about retaining control over your own soul, even when suffering through severe physical and emotional pain. Written while the author was suffering from severe tuberculosis.',
+  stanzas: [
+    [
+      [{ t: 'Out of the ' },{ t: 'night ', s:1 },{ t: 'that ' },{ t: 'covers ', s:1 },{ t: 'me', s:1 },{ t: ',', p:1 }],
+      [{ t: 'Black ', s:1 },{ t: 'as the ' },{ t: 'pit ', s:1 },{ t: 'from ' },{ t: 'pole ', s:1 },{ t: 'to ' },{ t: 'pole', s:1 },{ t: ',', p:1 }],
+      [{ t: 'I ' },{ t: 'thank ', s:1 },{ t: 'what- ' },{ t: 'ever ', s:1 },{ t: 'gods ', s:1 },{ t: 'may ' },{ t: 'be', s:1 },{ p:1 }],
+      [{ t: 'For my un- ' },{ t: 'conquerable ', s:1 },{ t: 'soul', s:1 },{ t: '.', p:1 }]
+    ],
+    [
+      [{ t: 'In the fell ' },{ t: 'clutch ', s:1 },{ t: 'of ' },{ t: 'circumstance', s:1 },{ p:1 }],
+      [{ t: 'I have not ' },{ t: 'winced ', s:1 },{ t: 'nor ' },{ t: 'cried ', s:1 },{ t: 'a- ' },{ t: 'loud', s:1 },{ t: '.', p:1 }],
+      [{ t: 'Under the ' },{ t: 'bludgeonings ', s:1 },{ t: 'of ' },{ t: 'chance', s:1 },{ p:1 }],
+      [{ t: 'My ' },{ t: 'head ', s:1 },{ t: 'is ' },{ t: 'bloody', s:1 },{ t: ', but un- ' },{ t: 'bowed', s:1 },{ t: '.', p:1 }]
+    ],
+    [
+      [{ t: 'It ' },{ t: 'matters ', s:1 },{ t: 'not ', s:1 },{ t: 'how ' },{ t: 'strait ', s:1 },{ t: 'the ' },{ t: 'gate', s:1 },{ t: ',', p:1 }],
+      [{ t: 'How ' },{ t: 'charged ', s:1 },{ t: 'with ' },{ t: 'punishments ', s:1 },{ t: 'the ' },{ t: 'scroll', s:1 },{ t: ',', p:1 }],
+      [{ t: 'I ', s:1 },{ t: 'am the ' },{ t: 'master ', s:1 },{ t: 'of my ' },{ t: 'fate', s:1 },{ t: ',', p:1 }],
+      [{ t: 'I ', s:1 },{ t: 'am the ' },{ t: 'captain ', s:1 },{ t: 'of my ' },{ t: 'soul', s:1 },{ t: '.', p:1 }]
+    ]
+  ],
+  meaning: [
+    {
+      lines: ["Out of the night that covers me,", "Black as the pit from pole to pole,", "I thank whatever gods may be", "For my unconquerable soul."],
+      explanation: "Surrounded by a darkness (suffering/pain) that feels absolute and worldwide, the speaker is grateful for having a spirit that refuses to be defeated."
+    },
+    {
+      lines: ["In the fell clutch of circumstance", "I have not winced nor cried aloud.", "Under the bludgeonings of chance", "My head is bloody, but unbowed."],
+      explanation: "Despite being beaten down randomly by fate ('circumstance' and 'chance'), the speaker takes the punishment without crying out or surrendering."
+    },
+    {
+      lines: ["It matters not how strait the gate,", "How charged with punishments the scroll,", "I am the master of my fate,", "I am the captain of my soul."],
+      explanation: "No matter how many difficulties or 'punishments' lie in the future, the speaker claims ultimate inner freedom. They alone control their destiny and their inner self."
+    }
+  ],
+  deepDive: [
+    {
+      phrase: '"unconquerable"',
+      tag: 'Polysyllabic Stress',
+      what: 'This is a long word with the stress falling clearly on the SECOND syllable: un-CON-ker-a-ble. The surrounding unstressed syllables flow quickly around it.',
+      phonetic: '/ʌnˈkɑŋkərəbəl/',
+      practice: 'Do not stress the "un-". Say it fast: un-CON-ker-uh-bul. Making it rapid emphasizes how solid the core "CON" syllable is, just like the meaning of the word.'
+    }
+  ]
+},
+
+// ═══════════════════════ 16 ═══════════════════════
+{
+  id: 'sonnet-18',
+  title: 'Sonnet 18: Shall I compare thee...',
+  author: 'William Shakespeare',
+  year: 1609,
+  level: 'Advanced',
+  context: 'The most famous sonnet in English literature. The speaker considers comparing their loved one to a summer day, but realizes the loved one is far more perfect, and will be made immortal through the poem itself.',
+  stanzas: [
+    [
+      [{ t: 'Shall I com- ' },{ t: 'pare ', s:1 },{ t: 'thee ', s:1 },{ t: 'to a ' },{ t: 'summer\'s ', s:1 },{ t: 'day?', s:1 },{ p:1 }],
+      [{ t: 'Thou ', s:1 },{ t: 'art more ' },{ t: 'lovely ', s:1 },{ t: 'and more ' },{ t: 'temperate', s:1 },{ t: ':', p:1 }],
+      [{ t: 'Rough ', s:1 },{ t: 'winds ', s:1 },{ t: 'do ' },{ t: 'shake ', s:1 },{ t: 'the ' },{ t: 'darling ', s:1 },{ t: 'buds ', s:1 },{ t: 'of ' },{ t: 'May', s:1 },{ t: ',', p:1 }],
+      [{ t: 'And ' },{ t: 'summer\'s ', s:1 },{ t: 'lease ', s:1 },{ t: 'hath ' },{ t: 'all too ' },{ t: 'short ', s:1 },{ t: 'a ' },{ t: 'date', s:1 },{ t: ';', p:1 }]
+    ],
+    [
+      [{ t: 'Sometime ', s:1 },{ t: 'too ' },{ t: 'hot ', s:1 },{ t: 'the ' },{ t: 'eye ', s:1 },{ t: 'of ' },{ t: 'heaven ', s:1 },{ t: 'shines', s:1 },{ t: ',', p:1 }],
+      [{ t: 'And ' },{ t: 'often ', s:1 },{ t: 'is his ' },{ t: 'gold ', s:1 },{ t: 'com- ' },{ t: 'plexion ', s:1 },{ t: 'dimmed', s:1 },{ t: ';', p:1 }],
+      [{ t: 'And ' },{ t: 'every ', s:1 },{ t: 'fair ', s:1 },{ t: 'from ' },{ t: 'fair ', s:1 },{ t: 'sometime ', s:1 },{ t: 'de- ' },{ t: 'clines', s:1 },{ t: ',', p:1 }],
+      [{ t: 'By ' },{ t: 'chance ', s:1 },{ t: 'or ' },{ t: 'nature\'s ', s:1 },{ t: 'changing ', s:1 },{ t: 'course ', s:1 },{ t: 'un- ' },{ t: 'trimmed', s:1 },{ t: ';', p:1 }]
+    ],
+    [
+      [{ t: 'But ' },{ t: 'thy ', s:1 },{ t: 'e- ' },{ t: 'ternal ', s:1 },{ t: 'summer ', s:1 },{ t: 'shall not ' },{ t: 'fade', s:1 },{ t: ',', p:1 }],
+      [{ t: 'Nor ' },{ t: 'lose ', s:1 },{ t: 'pos- ' },{ t: 'session ', s:1 },{ t: 'of that ' },{ t: 'fair ', s:1 },{ t: 'thou ' },{ t: 'ow\'st', s:1 },{ t: ';', p:1 }],
+      [{ t: 'Nor shall ' },{ t: 'Death ', s:1 },{ t: 'brag ', s:1 },{ t: 'thou ' },{ t: 'wander\'st ', s:1 },{ t: 'in his ' },{ t: 'shade', s:1 },{ t: ',', p:1 }],
+      [{ t: 'When in e- ' },{ t: 'ternal ', s:1 },{ t: 'lines ', s:1 },{ t: 'to ' },{ t: 'time ', s:1 },{ t: 'thou ' },{ t: 'grow\'st', s:1 },{ t: ':', p:1 }]
+    ],
+    [
+      [{ t: 'So ' },{ t: 'long ', s:1 },{ t: 'as ' },{ t: 'men ', s:1 },{ t: 'can ' },{ t: 'breathe ', s:1 },{ t: 'or ' },{ t: 'eyes ', s:1 },{ t: 'can ' },{ t: 'see', s:1 },{ t: ',', p:1 }],
+      [{ t: 'So ' },{ t: 'long ', s:1 },{ t: 'lives ' },{ t: 'this', s:1 },{ t: ', and ' },{ t: 'this ', s:1 },{ t: 'gives ' },{ t: 'life ', s:1 },{ t: 'to ' },{ t: 'thee', s:1 },{ t: '.', p:1 }]
+    ]
+  ],
+  meaning: [
+    {
+      lines: ["Shall I compare thee to a summer's day?", "Thou art more lovely and more temperate:"],
+      explanation: "The speaker debates comparing their love to a summer day, but decides against it because summer is flawed, whereas the beloved is mild, even-tempered, and more beautiful."
+    },
+    {
+      lines: ["Rough winds do shake the darling buds of May,", "And summer's lease hath all too short a date;"],
+      explanation: "Summer is often too rough (winds destroying spring buds) and it never lasts long enough ('short a date')."
+    },
+    {
+      lines: ["Sometime too hot the eye of heaven shines,", "And often is his gold complexion dimmed;", "And every fair from fair sometime declines,"],
+      explanation: "The sun ('eye of heaven') is sometimes too hot, or covered by clouds. All beautiful things in nature eventually lose their beauty as time passes."
+    },
+    {
+      lines: ["But thy eternal summer shall not fade,", "Nor lose possession of that fair thou ow'st;", "Nor shall Death brag thou wander'st in his shade,"],
+      explanation: "However, the beloved's beauty and youth will essentially be eternal. Even Death won't be able to claim them.",
+      vocab: ["ow'st: ownest or possest (you own that beauty)"]
+    },
+    {
+      lines: ["So long as men can breathe or eyes can see,", "So long lives this, and this gives life to thee."],
+      explanation: "The beloved becomes immortal because they are written about in this poem. As long as humans exist to read the poem ('this'), the beloved will also continue to 'live'."
+    }
+  ],
+  deepDive: [
+    {
+      phrase: '"complexion dimmed / course untrimmed"',
+      tag: 'Poetic Metrics & Dropped Vowels',
+      what: 'The "-ed" at the end of many words in Shakespearean English is only pronounced as a separate syllable if absolutely necessary for the beat. "Dimmed" and "untrimmed" are single syllables: /dɪmd/ and /ʌnˈtrɪmd/.',
+      phonetic: '/kəmˈplɛkʃən dɪmd/',
+      practice: 'Don\'t say "dim-med". Treat these exactly like modern English past tense words. The metric beat requires it to flow smoothly.'
     }
   ]
 }
